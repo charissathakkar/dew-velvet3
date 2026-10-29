@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dew &amp; Velvet | Clean girl and bold makeup</title>
+<script>try{var t=JSON.parse(localStorage.getItem("dv-theme"));document.documentElement.setAttribute("data-theme",t||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff5f9;--ink:#3a1f2e;--muted:#8a6677;--card:#ffffff;--line:#f7d3e3;--blush:#ffd9ea;--berry:#e5367a;--night:#1b1030;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d050a;--ink:#fff0f4;--muted:#c9a3b2;--card:#1a0b13;--line:#3d1829;--blush:#2b0e1c;--berry:#ff5c8a}}
+:root[data-theme="dark"]{--bg:#0d050a;--ink:#fff0f4;--muted:#c9a3b2;--card:#1a0b13;--line:#3d1829;--blush:#2b0e1c;--berry:#ff5c8a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Jost","Helvetica Neue",Arial,sans-serif;line-height:1.55}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.serif{font-family:"Cormorant Garamond",Georgia,serif}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.6rem;font-weight:600;text-decoration:none;letter-spacing:.02em}
+.logo em{color:var(--berry)}
+nav{display:flex;gap:20px;font-size:.95rem}
+nav a{text-decoration:none}
+nav a:hover{color:var(--berry)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--berry);outline-offset:3px;border-radius:6px}
+.hero{display:grid;grid-template-columns:1fr 1fr}
+.half{position:relative;overflow:hidden;padding:56px 28px;min-height:420px;display:flex;flex-direction:column;justify-content:center}
+.half .in{position:relative;z-index:1;max-width:340px}
+.half h1{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(3.4rem,10vw,5.6rem);line-height:.95;margin:0 0 10px;font-weight:600;font-style:italic}
+.half p{margin:0 0 22px;font-size:1.05rem}
+.clean{background:var(--blush);color:var(--ink);align-items:flex-end}
+.bold{background:#14070d;color:#fff;align-items:flex-start}
+.bold h1{color:#ff5c8a}
+.hb{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:500;padding:12px 26px;border-radius:99px;letter-spacing:.03em}
+.clean .hb{background:var(--ink);color:var(--bg)}
+.bold .hb{background:#ff5c8a;color:#14070d}
+.half svg{position:absolute;z-index:0;width:210px;opacity:.95;filter:drop-shadow(0 14px 18px rgba(0,0,0,.25))}
+.clean svg{left:6%;bottom:-20px;transform:rotate(-12deg)}
+.bold svg{right:5%;bottom:-20px;transform:rotate(12deg)}
+.half::before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;z-index:0}
+.clean::before{left:-90px;top:-80px;background:radial-gradient(circle,#ffffff99,transparent 70%)}
+.bold::before{right:-110px;top:-90px;background:radial-gradient(circle,#8c1c3f,transparent 68%)}
+.mid{background:var(--night);color:#f3ecff;padding:44px 0;text-align:center}
+.mid h2{font-family:"Cormorant Garamond",Georgia,serif;font-size:2.4rem;margin:6px 0;font-weight:600;font-style:italic}
+.mid p{margin:0 auto 14px;max-width:46ch;color:#cbbfe6}
+.pill{display:inline-block;padding:4px 16px;border-radius:99px;background:#33245a;font-weight:500;font-size:.95rem}
+.pill.on{background:#ffcf5c;color:#2a1a00}
+.clock{font-family:"Cormorant Garamond",Georgia,serif;font-size:3.4rem;font-weight:600;letter-spacing:.04em;margin:8px 0;font-variant-numeric:tabular-nums}
+.mid button{font:inherit;font-weight:500;background:transparent;color:#f3ecff;border:1.5px solid #8f7dc4;border-radius:99px;padding:8px 20px;cursor:pointer}
+.mid button:hover{background:#33245a}
+section.shop{padding:50px 0}
+h2.t{font-family:"Cormorant Garamond",Georgia,serif;font-size:2.4rem;margin:0 0 4px;font-weight:600}
+.sub{color:var(--muted);margin:0 0 20px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.tabs button{font:inherit;font-weight:500;background:var(--card);color:var(--ink);border:1.5px solid var(--line);border-radius:99px;padding:8px 20px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:12px 12px 16px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(60,20,40,.12)}
+.pic{height:150px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--c) 24%,var(--card))}
+.pic svg{height:128px;width:auto;filter:drop-shadow(0 6px 6px rgba(0,0,0,.2))}
+.kind{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:10px 0 0}
+.card h3{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.25rem;line-height:1.15;margin:2px 0 4px;font-weight:600}
+.card p{margin:0 0 8px;font-size:.88rem;color:var(--muted)}
+.pr b{font-size:1.1rem;font-weight:600}
+.pr s{color:var(--muted);margin-left:8px;font-size:.9rem}
+.pr.deal b{color:var(--berry)}
+.tag{position:absolute;top:18px;left:18px;background:#ffcf5c;color:#2a1a00;font-size:.75rem;font-weight:600;border-radius:99px;padding:2px 10px}
+.visit{background:var(--blush);padding:46px 0}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+address{font-style:normal;margin:0 0 12px}
+.visit a.l{display:block;font-weight:500;word-break:break-all;margin:6px 0}
+.btn{display:inline-block;margin-top:10px;background:var(--ink);color:var(--bg);text-decoration:none;padding:10px 22px;border-radius:99px;font-weight:500}
+footer{padding:22px 0;text-align:center;color:var(--muted);font-size:.9rem}
+
+@keyframes fc{0%,100%{transform:rotate(-12deg) translateY(0)}50%{transform:rotate(-7deg) translateY(-14px)}}
+@keyframes fb{0%,100%{transform:rotate(12deg) translateY(0)}50%{transform:rotate(7deg) translateY(-14px)}}
+.clean svg{animation:fc 5s ease-in-out infinite}.bold svg{animation:fb 5.5s ease-in-out infinite}
+.spark{position:absolute;z-index:1;width:12px;height:12px;pointer-events:none;opacity:0;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%);animation:tw 3.2s ease-in-out infinite}
+.clean .spark{background:#fff}.bold .spark{background:#ff8fb0}
+@keyframes tw{0%,100%{opacity:0;transform:scale(.3) rotate(0)}50%{opacity:1;transform:scale(1.3) rotate(45deg)}}
+.hb{transition:transform .2s}.hb:hover{transform:translateY(-2px) scale(1.05)}
+.rv{opacity:0}.rv.in{opacity:1;animation:rise .6s ease backwards;animation-delay:var(--d,0ms)}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.pic svg{transition:transform .3s}.card:hover .pic svg{transform:rotate(-6deg) scale(1.1)}
+.fav{position:absolute;top:18px;right:18px;z-index:2;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--berry);font-size:1.15rem;line-height:1;cursor:pointer}
+.fav.pop{animation:pop .4s}
+@keyframes pop{50%{transform:scale(1.45)}}
+.mid{position:relative;overflow:hidden}.mid .wrap{position:relative}
+.mid::before{content:"";position:absolute;inset:0;opacity:.45;background-image:radial-gradient(1.5px 1.5px at 8% 30%,#fff,transparent),radial-gradient(1.5px 1.5px at 28% 72%,#fff,transparent),radial-gradient(2px 2px at 52% 22%,#fff,transparent),radial-gradient(1.5px 1.5px at 74% 66%,#fff,transparent),radial-gradient(2px 2px at 92% 24%,#fff,transparent),radial-gradient(1.5px 1.5px at 40% 50%,#fff,transparent);animation:star 3.5s ease-in-out infinite alternate}
+@keyframes star{to{opacity:1}}
+.pill.on{animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 #ffcf5caa}60%{box-shadow:0 0 0 12px transparent}}
+.you{padding:46px 0}.you .wrap{max-width:760px}
+.nm{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:6px 0 14px}
+.nm input{font:inherit;padding:10px 18px;border-radius:99px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);min-width:230px}
+.q{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:10px 0}
+.q b{width:60px;font-weight:600}
+.chip{font:inherit;font-weight:500;background:var(--card);color:var(--ink);border:1.5px solid var(--line);border-radius:99px;padding:8px 18px;cursor:pointer;transition:transform .15s}
+.chip:hover{transform:translateY(-2px)}
+.chip[aria-pressed="true"]{background:var(--berry);color:#fff;border-color:var(--berry)}
+.res h3,#favs h3{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.7rem;margin:22px 0 6px;font-weight:600}
+.hint{color:var(--muted);margin:16px 0}
+.ri{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 14px;margin:8px 0}
+.ri svg{width:38px;height:46px;flex:none}.ri div{flex:1;min-width:0}.ri b{display:block;font-weight:500}.ri span{font-size:.8rem;color:var(--muted)}
+.ri em{font-style:normal;font-weight:600;color:var(--berry)}
+.tot{display:flex;justify-content:space-between;padding:8px 14px;font-size:1.1rem}
+.hb2{font:inherit;font-weight:500;background:var(--ink);color:var(--bg);border:0;border-radius:99px;padding:10px 22px;cursor:pointer}
+.x{background:none;border:0;color:var(--muted);cursor:pointer;font-size:1rem}
+nav a.hl{color:var(--berry);font-weight:600}
+@media (max-width:520px){nav{gap:10px;font-size:.85rem}.logo{font-size:1.3rem}}
+
+.card{cursor:pointer}
+.rt{margin:0 0 4px!important;color:#e8a317!important;font-size:.85rem!important}.rt span{color:var(--muted)}
+.more{font:inherit;background:none;border:0;color:var(--berry);font-weight:500;padding:0;margin-top:6px;cursor:pointer}
+dialog{border:0;padding:0;border-radius:24px;background:var(--card);color:var(--ink);width:min(780px,94vw);max-height:90vh;overflow:auto;box-shadow:0 30px 70px rgba(0,0,0,.45)}
+dialog[open]{animation:dlg .3s ease}
+@keyframes dlg{from{opacity:0;transform:translateY(24px) scale(.96)}}
+dialog::backdrop{background:rgba(20,7,13,.6);backdrop-filter:blur(3px)}
+.xc{position:sticky;top:10px;float:right;margin:10px 12px 0 0;z-index:3;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.dg{display:grid;grid-template-columns:230px 1fr;gap:24px;padding:24px}
+.big{border-radius:18px;display:flex;align-items:flex-start;justify-content:center;padding-top:34px;min-height:260px;background:color-mix(in srgb,var(--c) 26%,var(--card));transition:background .3s}
+.big svg{width:150px;filter:drop-shadow(0 10px 10px rgba(0,0,0,.25));animation:bob 4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.dg h2{font-family:"Cormorant Garamond",Georgia,serif;font-size:2.1rem;line-height:1.05;margin:2px 0 6px;font-weight:600}
+.dg h3{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:18px 0 8px;font-weight:600}
+.dg h3 span{color:var(--ink);letter-spacing:0;text-transform:none;font-size:.95rem}
+.dg p{margin:6px 0}
+.stars{color:#e8a317;letter-spacing:2px}
+.ing,.shades{display:flex;flex-wrap:wrap;gap:8px}
+.ing span{background:var(--blush);border-radius:99px;padding:3px 12px;font-size:.85rem}
+.sh{width:32px;height:32px;border-radius:50%;border:2px solid var(--card);box-shadow:0 0 0 1.5px var(--line);cursor:pointer;background:var(--s);transition:transform .15s}
+.sh:hover{transform:scale(1.15)}
+.sh[aria-pressed="true"]{box-shadow:0 0 0 3px var(--berry)}
+.dg .chip{padding:5px 14px}
+.rvw{border-top:1px solid var(--line);padding:10px 0;font-size:.92rem}
+.rvw small{display:block;color:var(--muted)}
+.note{font-size:.78rem;color:var(--muted);margin:6px 0 14px!important}
+@media (max-width:640px){.dg{grid-template-columns:1fr}.big{min-height:190px}.big svg{width:110px}}
+
+.badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:14px 20px;background:var(--card);border-bottom:1px solid var(--line);font-weight:500;font-size:.95rem}
+.badges span{display:inline-flex;gap:6px;align-items:center;background:var(--blush);padding:4px 14px;border-radius:99px}
+.bd{display:flex;gap:6px;margin:6px 0}.bd span{font-size:.78rem;background:color-mix(in srgb,#2f9e6e 22%,var(--card));color:var(--ink);border-radius:99px;padding:2px 10px}
+.acts{display:flex;gap:12px;align-items:center;margin-top:8px}
+.more{margin-top:0}
+.add{font:inherit;font-weight:500;background:var(--ink);color:var(--bg);border:0;border-radius:99px;padding:7px 16px;cursor:pointer;transition:transform .15s}
+.add:hover{transform:translateY(-2px)}
+.cartb{background:none;border:0;font:inherit;cursor:pointer;padding:0}
+.bump{animation:pop .4s}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--ink);color:var(--bg);padding:10px 20px;border-radius:99px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:50;max-width:90vw;text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+#cart{width:min(540px,94vw)}.cp{padding:22px 24px 26px}
+.cp h2{margin:0 0 10px;font-family:"Cormorant Garamond",Georgia,serif;font-size:2rem;font-weight:600}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-size:1rem;line-height:1}
+.rm{background:none;border:0;color:var(--muted);cursor:pointer}
+.cf{display:grid;gap:8px;margin:12px 0}
+.cf input,.cf textarea{font:inherit;padding:10px 14px;border-radius:14px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);width:100%}
+.cerr{color:var(--berry);font-weight:500;min-height:1.3em;margin:0 0 6px}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap}
+.hb2.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.how{margin:0;padding-left:20px}.how li{margin:4px 0}
+.you.match{background:var(--blush)}
+.sws{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 14px}
+.sws .sh{width:38px;height:38px}
+.visit .l{display:block;font-weight:500;margin:6px 0}
+@media (max-width:520px){nav .hm{display:none}}
+
+.mid{background:var(--bg);color:var(--ink);padding:48px 0 54px}
+.mid::before{display:none}
+.mid p{color:var(--muted)}
+.mid .wrap{max-width:1000px;width:auto;padding:0 20px;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;border-radius:0}
+.pill{background:var(--blush);color:var(--ink)}
+.pill.on{background:#ffcf5c;color:#2a1a00}
+.clock{color:var(--berry)}
+.mid button{color:var(--ink);border-color:var(--ink)}
+.mid button:hover{background:var(--blush)}
+.flat{position:relative;margin:30px auto 0;max-width:960px;border-radius:28px;overflow:hidden;background:radial-gradient(ellipse at 28% 18%,#fffaf6 0,#f6e3dc 55%,#ecc9c0 100%);box-shadow:0 20px 50px rgba(60,20,40,.18)}
+.flat::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 90px rgba(120,60,60,.22);pointer-events:none}
+.flat svg{position:absolute;width:auto;filter:drop-shadow(5px 9px 7px rgba(70,30,30,.35))}
+
+.flat{margin:0 auto}
+.items{position:absolute;inset:0}
+.mtxt{position:relative;z-index:5;display:flex;justify-content:center;padding:60px 12px}
+.mtin{position:relative;width:min(560px,100%);text-align:center;color:#2a1a1f}
+.mtin::before{content:"";position:absolute;inset:-28px -24px;z-index:-1;background:radial-gradient(ellipse at center,rgba(255,250,246,.96) 0,rgba(255,250,246,.84) 50%,rgba(255,250,246,0) 75%);filter:blur(6px)}
+.mtin h2{color:#2a1a1f}
+.mtin p{color:#5a4146;margin:0 auto 14px;max-width:46ch}
+.mtin .pill{background:#fff;color:#2a1a1f}.mtin .pill.on{background:#ffcf5c;color:#2a1a00}
+.mtin .clock{color:#8c1c3f}
+.mtin button{color:#2a1a1f;border-color:#2a1a1f}.mtin button:hover{background:#fff}
+
+#theme{background:none;border:1.5px solid var(--line);border-radius:50%;width:34px;height:34px;cursor:pointer;font-size:1rem;line-height:1;padding:0;transition:transform .2s}
+#theme:hover{transform:rotate(20deg) scale(1.1)}
+.bub{position:absolute;z-index:0;border-radius:50%;pointer-events:none;background:radial-gradient(circle at 30% 28%,#fff 0,rgba(255,255,255,.35) 38%,rgba(255,255,255,.08) 70%);border:1.5px solid rgba(255,255,255,.8);animation:bubf 6s ease-in-out infinite}
+@keyframes bubf{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+:root[data-theme="dark"] .bub{display:none}
+/* light: clean girl, bright and bubbly */
+:root[data-theme="light"] .card{border-radius:26px}
+:root[data-theme="light"] .pic{border-radius:20px}
+:root[data-theme="light"] .clean .hb,:root[data-theme="light"] .add,:root[data-theme="light"] .btn,:root[data-theme="light"] .map{background:linear-gradient(135deg,#ff86b1,#e5367a);color:#fff}
+:root[data-theme="light"] .tabs button[aria-pressed="true"]{background:linear-gradient(135deg,#ff86b1,#e5367a);border-color:transparent;color:#fff}
+:root[data-theme="light"] .badges span{background:linear-gradient(135deg,#ffe0ee,#ffd0e4)}
+/* dark: bold */
+:root[data-theme="dark"] h2.t{text-transform:uppercase;letter-spacing:.05em}
+:root[data-theme="dark"] .card{border-color:#4a1d31}
+:root[data-theme="dark"] .card:hover{box-shadow:0 0 0 1.5px var(--berry),0 16px 34px rgba(255,92,138,.28)}
+:root[data-theme="dark"] .bold svg{filter:drop-shadow(0 0 26px rgba(255,92,138,.45)) drop-shadow(0 14px 18px rgba(0,0,0,.4))}
+:root[data-theme="dark"] .pic,:root[data-theme="dark"] .big{background:radial-gradient(circle at 30% 18%,rgba(255,214,140,.3),transparent 62%),color-mix(in srgb,var(--c) 16%,#7a4b14)}
+:root[data-theme="dark"] svg [fill="#2a1a1f"]{fill:#f3dba8}
+:root[data-theme="dark"] .ri svg{background:#7a4b14;border-radius:10px;padding:3px}
+:root[data-theme="dark"] .clean{background:radial-gradient(circle at 20% 15%,#4a1230,#1b0a13 70%)}
+:root[data-theme="dark"] .clean .hb,:root[data-theme="dark"] .add,:root[data-theme="dark"] .btn,:root[data-theme="dark"] .map{background:var(--berry);color:#14070d}
+:root[data-theme="dark"] .tabs button[aria-pressed="true"]{background:var(--berry);border-color:var(--berry);color:#14070d}
+:root[data-theme="dark"] .badges span{background:#2b0e1c}
+/* dark: original midnight look (navy, stars, centred text) */
+:root[data-theme="dark"] .mid{background:var(--night);color:#f3ecff;padding:44px 0}
+:root[data-theme="dark"] .mid::before{display:block}
+:root[data-theme="dark"] .flat{background:none;box-shadow:none;border-radius:0;overflow:visible}
+:root[data-theme="dark"] .flat::after,:root[data-theme="dark"] .mtin::before,:root[data-theme="dark"] .items{display:none}
+:root[data-theme="dark"] .mid .mtxt{padding:0!important}
+:root[data-theme="dark"] .mtin{color:#f3ecff}
+:root[data-theme="dark"] .mtin h2{color:#f3ecff}
+:root[data-theme="dark"] .mtin p{color:#cbbfe6}
+:root[data-theme="dark"] .mtin .pill{background:#33245a;color:#f3ecff}
+:root[data-theme="dark"] .mtin .pill.on{background:#ffcf5c;color:#2a1a00}
+:root[data-theme="dark"] .mtin .clock{color:#f3ecff}
+:root[data-theme="dark"] .mtin button{color:#f3ecff;border-color:#8f7dc4}
+:root[data-theme="dark"] .mtin button:hover{background:#33245a}
+@media (max-width:820px){.grid{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.half{min-height:340px}.cols{grid-template-columns:1fr}.clean,.bold{align-items:flex-start}.half svg{width:150px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="#top">Dew <em>&amp;</em> Velvet</a><nav><a href="#shop">Shop</a><a href="#you">For you</a><a class="hm" href="#midnight">Midnight</a><a class="hl" href="#you" aria-label="Favourites">♥ <span id="fc">0</span></a><button class="hl cartb" id="cartbtn" type="button" aria-label="Open cart">🛍️ <span id="cc">0</span></button><button id="theme" type="button" aria-label="Switch theme" title="Switch theme">🌙</button></nav></div></header>
+
+<div class="hero" id="top">
+  <div class="half clean"><div class="in"><h1>Clean.</h1><p>Dewy skin, soft blush and a barely-there glow that looks like you, only better.</p><button class="hb" data-go="clean">Shop clean girl</button></div><svg id="hc" viewBox="0 0 80 100"></svg></div>
+  <div class="half bold"><div class="in"><h1>Bold.</h1><p>Cherry lips, razor wings and midnight eyes for the nights you want to be seen.</p><button class="hb" data-go="bold">Shop bold</button></div><svg id="hb" viewBox="0 0 80 100"></svg></div>
+</div>
+
+<div class="badges"><span>🐰 Cruelty-free</span><span>🌱 Vegan</span><span>🌙 Open 24 hours</span><span>🎁 Gift kits</span></div>
+
+<section class="you" id="you">
+  <div class="wrap">
+    <h2 class="t" id="hi">Hi, gorgeous.</h2>
+    <p class="sub">Tell us your name and your vibe, and we will build a routine just for you.</p>
+    <div class="nm"><label for="nm">Your name</label><input id="nm" maxlength="20" placeholder="Type your name" autocomplete="given-name"></div>
+    <div class="q"><b>Skin</b><button class="chip" type="button" data-skin="dry" aria-pressed="false">Dry</button><button class="chip" type="button" data-skin="oily" aria-pressed="false">Oily</button><button class="chip" type="button" data-skin="combo" aria-pressed="false">Combination</button></div>
+    <div class="q"><b>Mood</b><button class="chip" type="button" data-mood="soft" aria-pressed="false">Soft and natural</button><button class="chip" type="button" data-mood="date" aria-pressed="false">Date night</button><button class="chip" type="button" data-mood="glam" aria-pressed="false">Full glam</button></div>
+    <div class="res" id="res" aria-live="polite"></div>
+    <div id="favs"></div>
+  </div>
+</section>
+
+<section class="you match" id="match">
+  <div class="wrap">
+    <h2 class="t">Find your shade</h2>
+    <p class="sub">Tap the swatch closest to your skin, then choose your undertone.</p>
+    <div class="sws" id="sw"></div>
+    <div class="q"><b>Undertone</b><button class="chip" type="button" data-u="cool" aria-pressed="false">Cool</button><button class="chip" type="button" data-u="neutral" aria-pressed="false">Neutral</button><button class="chip" type="button" data-u="warm" aria-pressed="false">Warm</button></div>
+    <p class="hint">Not sure? Blue or purple veins and silver jewellery usually mean cool. Green veins and gold jewellery usually mean warm. A mix means neutral.</p>
+    <div id="mres" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="mid" id="midnight">
+  <div class="wrap">
+    <div class="flat" id="flat">
+      <div class="items" id="items" aria-hidden="true"></div>
+      <div class="mtxt" id="mtxt"><div class="mtin" id="mtin">
+        <span class="pill" id="pill">Checking…</span>
+        <h2>The Midnight Hour</h2>
+        <p>Every night from 12:00 to 12:30 am India time, for exactly thirty minutes, everything drops by 25%. Orders placed in that half hour get the Midnight price, in store or online. We are open 24 hours, every day.</p>
+        <div class="clock" id="clock">--:--:--</div>
+        <button id="prev" type="button" aria-pressed="false">Preview midnight prices</button>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="shop" id="shop">
+  <div class="wrap">
+    <h2 class="t">The collection</h2>
+    <p class="sub">Skin prep, soft everyday looks and bold statements.</p>
+    <div class="tabs" id="tabs"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap"><div class="cols">
+    <div><h2 class="t">Open all day, every day</h2><p>We never close. Come by at any hour, and catch the Midnight Hour for our best prices.</p></div>
+    <div><address>Abc Bungalows<br>Nr. Xyz Stationary Shop<br>Bopal, Ahmedabad 380058</address>
+    <a class="l" href="mailto:sushrutpatch@gmail.com">sushrutpatch@gmail.com</a>
+    <span class="l">Instagram: charissa_t@88</span>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Bopal+Ahmedabad+380058" target="_blank" rel="noopener">Open in Maps</a></div>
+  </div></div>
+</section>
+<dialog id="dlg" aria-label="Product details"></dialog>
+<dialog id="cart" aria-label="Your cart"></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<footer>© Dew &amp; Velvet, Bopal, Ahmedabad</footer>
+
+<script>
+const P=[
+['Cloud Cleanse Gel','prep',1347,'Gentle gel that melts off the day.','#f1e9da','tube'],
+['Milky Toner','prep',1197,'Soft milky toner that calms and softens.','#f4efe9','bottle'],
+['Dew Drop Mist','prep',1197,'A fine hydrating mist for a glassy base.','#9fd3e0','bottle'],
+['Barrier Cream','prep',1797,'Light moisturiser with ceramides.','#f3d3cc','jar'],
+['Dewy Hydrating Moisturiser','prep',1647,'Plumping gel-cream with hyaluronic acid.','#bfe3ea','jar'],
+['Glow SPF 50 Primer','prep',1647,'Sheer sunscreen that grips makeup.','#f7d98f','tube'],
+['Overnight Lip Mask','prep',1047,'Wake up to soft, smooth lips.','#f2a7bb','jar'],
+['Skin Veil Tint','clean',2097,'Breathable coverage in 12 shades.','#e3b894','bottle'],
+['Soft Focus Concealer','clean',1497,'Brightens without creasing.','#d9ab86','tube'],
+['Peach Kiss Blush Stick','clean',1647,'Creamy flush for cheeks and lips.','#f59a7f','stick'],
+['Brow Fluff Gel','clean',1197,'Brushed-up brows that stay put.','#8a6a55','wand'],
+['Clear Sip Lip Oil','clean',1347,'Glassy shine with a soft tint.','#f4b6bd','bottle'],
+['Lash Lift Mascara','clean',1497,'Natural length, zero clumps.','#4a3535','wand'],
+['Glow Stick Highlighter','clean',1797,'A lit-from-within finish.','#f5d3a8','stick'],
+['Nude Eyeshadow Palette','clean',2697,'Six soft neutrals, from matte cream to satin taupe.','#c9a38c','palette'],
+['Cherry Noir Lipstick','bold',1797,'Velvet matte red, all-day wear.','#b5122e','stick'],
+['Berry Rush Liquid Lip','bold',1947,'Deep berry, one-swipe colour.','#6e1a45','wand'],
+['Razor Wing Liner','bold',1347,'Ultra-fine tip for sharp wings.','#1a1a1a','wand'],
+['Midnight Shadow Palette','bold',3897,'12 shades from smoky to shimmer.','#4a3478','palette'],
+['Hot Pink Pop Blush','bold',1647,'Pigmented, blendable punch.','#e63e8c','compact'],
+['Gilded Pigment Pot','bold',1497,'Metallic gold for lids and cheekbones.','#d9a441','jar'],
+['Volume Bomb Mascara','bold',1647,'Dramatic lashes, deep black.','#111111','wand']
+];
+const NAMES={all:'All',prep:'Skin prep',clean:'Clean girl',bold:'Bold',kits:'Gift kits'};
+const D='#2a1a1f';
+const BL='#2b2226';
+function gl(x,y,w,h,r,c){return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+r+'" fill="'+c+'"/><rect x="'+(x+w*.14)+'" y="'+(y+h*.05)+'" width="'+(w*.15)+'" height="'+(h*.88)+'" rx="'+(w*.07)+'" fill="#fff" opacity=".42"/><rect x="'+(x+w*.7)+'" y="'+y+'" width="'+(w*.3)+'" height="'+h+'" rx="'+Math.min(r,w*.3)+'" fill="#000" opacity=".17"/>'}
+function mt(x,y,w,h,r){return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+r+'" fill="#d9b45e"/><rect x="'+(x+w*.12)+'" y="'+y+'" width="'+(w*.22)+'" height="'+h+'" rx="'+(r/2)+'" fill="#fff6cc" opacity=".8"/><rect x="'+(x+w*.74)+'" y="'+y+'" width="'+(w*.2)+'" height="'+h+'" rx="'+(r/2)+'" fill="#6f5118" opacity=".5"/>'}
+function lab(x,y,w,h,c){return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="2.5" fill="#fff" opacity=".88"/><rect x="'+(x+w*.2)+'" y="'+(y+h*.3)+'" width="'+(w*.6)+'" height="2" rx="1" fill="'+c+'"/><rect x="'+(x+w*.3)+'" y="'+(y+h*.58)+'" width="'+(w*.4)+'" height="2" rx="1" fill="'+c+'" opacity=".6"/>'}
+function icon(t,c){
+  const pans=[0,1,2,3,4,5].map(i=>{const x=22+(i%3)*18,y=44+Math.floor(i/3)*21;return '<circle cx="'+x+'" cy="'+y+'" r="8.2" fill="#000" opacity=".4"/><circle cx="'+x+'" cy="'+y+'" r="7.3" fill="'+c+'" opacity="'+(.5+i*.1)+'"/><ellipse cx="'+(x-2)+'" cy="'+(y-2.6)+'" rx="3" ry="1.8" fill="#fff" opacity=".38"/>'}).join('');
+  const g={
+   stick:'<path d="M32 50V31l16-9v28z" fill="'+c+'"/><path d="M34 48V33l4-2v17z" fill="#fff" opacity=".4"/><path d="M44 50V24l4-2v28z" fill="#000" opacity=".2"/>'+mt(27,48,26,13,2)+gl(27,61,26,30,4,BL),
+   bottle:mt(33,9,14,16,3)+'<rect x="36" y="25" width="8" height="5" fill="#ddd"/>'+gl(21,29,38,61,12,c)+lab(26,50,28,22,c),
+   jar:mt(15,35,50,17,6)+gl(17,52,46,38,10,c)+lab(23,62,34,15,c),
+   tube:gl(30,5,20,17,4,BL)+'<path d="M26 22h28l-2 62H28z" fill="'+c+'"/><path d="M31 24h4l-1.5 58H30z" fill="#fff" opacity=".4"/><path d="M47 22h7l-2 62h-6z" fill="#000" opacity=".17"/><rect x="27" y="82" width="26" height="9" rx="2" fill="'+c+'"/><rect x="27" y="82" width="26" height="9" rx="2" fill="#000" opacity=".25"/>'+lab(31,40,18,22,c),
+   wand:gl(33,5,14,38,6,BL)+mt(32,41,16,6,2)+gl(31,47,18,44,7,c)+lab(34,58,12,17,c),
+   palette:'<rect x="6" y="24" width="68" height="58" rx="9" fill="'+BL+'"/><rect x="6" y="24" width="68" height="7" rx="3.5" fill="#fff" opacity=".18"/><rect x="10" y="30" width="60" height="48" rx="6" fill="#161013"/>'+pans,
+   compact:'<circle cx="40" cy="57" r="33" fill="'+BL+'"/><circle cx="40" cy="57" r="32" fill="none" stroke="#d9b45e" stroke-width="2.5"/><path d="M17 42a28 28 0 0 1 22-15" stroke="#fff" stroke-width="3" opacity=".35" fill="none" stroke-linecap="round"/><circle cx="40" cy="57" r="25" fill="'+c+'"/><circle cx="40" cy="57" r="25" fill="#000" opacity=".1"/><ellipse cx="32" cy="47" rx="10" ry="5.5" fill="#fff" opacity=".4"/>',
+   kit:gl(12,42,56,48,6,c)+gl(8,30,64,16,5,BL)+'<rect x="36" y="30" width="8" height="60" fill="#fff" opacity=".8"/><path d="M40 30c-16-21-29-4-14 0zM40 30c16-21 29-4 14 0z" fill="#fff" opacity=".92"/><path d="M40 30c-9-11-16-3-8 0z" fill="#000" opacity=".12"/><circle cx="40" cy="30" r="3.5" fill="#fff"/>'
+  };
+  return '<ellipse cx="40" cy="95" rx="24" ry="3.5" fill="#000" opacity=".16"/>'+g[t];
+}
+document.getElementById('hc').innerHTML=icon('bottle','#e3b894');
+document.getElementById('hb').innerHTML=icon('stick','#b5122e');
+
+let cat='all',preview=false,live=false;
+const money=n=>'₹'+n.toLocaleString('en-IN');
+const deal=n=>Math.round(n*0.75/5)*5;
+function renderTabs(){
+  document.getElementById('tabs').innerHTML=Object.keys(NAMES).map(k=>'<button type="button" data-k="'+k+'" aria-pressed="'+(k===cat)+'">'+NAMES[k]+'</button>').join('');
+}
+function renderGrid(){
+  const on=live||preview;
+  document.getElementById('grid').innerHTML=P.filter(p=>cat==='all'||p[1]===cat).map((p,i)=>
+   '<article class="card rv" style="--d:'+(i%4)*70+'ms"><button class="fav" type="button" data-n="'+p[0]+'" aria-pressed="'+favs.has(p[0])+'" aria-label="Save '+p[0]+' to favourites">'+(favs.has(p[0])?'♥':'♡')+'</button>'+(on?'<span class="tag">−25%</span>':'')+
+   '<div class="pic" style="--c:'+p[4]+'"><svg viewBox="0 0 80 100" aria-hidden="true">'+icon(p[5],p[4])+'</svg></div>'+
+   '<p class="kind">'+NAMES[p[1]]+'</p><h3>'+p[0]+'</h3>'+(DET[p[0]]?'<p class="rt">★ '+DET[p[0]][3]+' <span>('+DET[p[0]][4]+')</span></p>':'')+'<p>'+p[3]+'</p>'+
+   '<div class="pr'+(on?' deal':'')+'"><b>'+money(on?deal(p[2]):p[2])+'</b>'+(on?'<s>'+money(p[2])+'</s>':'')+'</div><div class="acts"><button class="add" type="button" data-a="'+p[0]+'">Add to cart</button><button class="more" type="button" data-d="'+p[0]+'">Details</button></div></article>').join('');watch();renderYou();
+}
+document.getElementById('tabs').addEventListener('click',e=>{const k=e.target.dataset.k;if(k){cat=k;renderTabs();renderGrid()}});
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>{cat=b.dataset.go;renderTabs();renderGrid();document.getElementById('shop').scrollIntoView({behavior:'smooth'})}));
+document.getElementById('prev').addEventListener('click',e=>{
+  preview=!preview;e.target.setAttribute('aria-pressed',preview);
+  e.target.textContent=preview?'Back to regular prices':'Preview midnight prices';renderGrid();
+});
+const pad=n=>String(n).padStart(2,'0');
+function tick(){
+  const p=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).formatToParts(new Date());
+  const g=t=>+p.find(x=>x.type===t).value;
+  const s=(g('hour')%24)*3600+g('minute')*60+g('second');
+  const now=s<1800;
+  const left=now?1800-s:(86400-s)%86400;
+  const h=Math.floor(left/3600),m=Math.floor(left%3600/60),sec=left%60;
+  document.getElementById('clock').textContent=(now?'':pad(h)+':')+pad(m)+':'+pad(sec);
+  const pill=document.getElementById('pill');
+  pill.className='pill'+(now?' on':'');
+  pill.textContent=now?'Midnight Hour is live, ends in':'Next Midnight Hour in';
+  if(now!==live){live=now;document.getElementById('prev').style.display=now?'none':'';renderGrid();if(cdlg.open)renderCart();flat()}
+}
+
+const SK='dv-';
+function load(k,d){try{const v=localStorage.getItem(SK+k);return v===null?d:JSON.parse(v)}catch(e){return d}}
+function save(k,v){try{localStorage.setItem(SK+k,JSON.stringify(v))}catch(e){}}
+let name=load('name',''),favs=new Set(load('favs',[])),skin=null,mood=null;
+const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1}):null;
+function watch(){document.querySelectorAll('.rv:not(.in)').forEach(el=>io?io.observe(el):el.classList.add('in'))}
+const esc=t=>t.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const byName=n=>P.find(p=>p[0]===n);
+const cur=p=>(live||preview)?deal(p[2]):p[2];
+const SKIN={dry:'Dewy Hydrating Moisturiser',oily:'Milky Toner',combo:'Cloud Cleanse Gel'};
+const MOOD={soft:['Skin Veil Tint','Peach Kiss Blush Stick','Clear Sip Lip Oil'],date:['Peach Kiss Blush Stick','Berry Rush Liquid Lip','Lash Lift Mascara'],glam:['Cherry Noir Lipstick','Razor Wing Liner','Midnight Shadow Palette']};
+const row=(p,i,x)=>'<div class="ri rv" style="--d:'+i*90+'ms"><svg viewBox="0 0 80 100" aria-hidden="true">'+icon(p[5],p[4])+'</svg><div><b>'+p[0]+'</b><span>'+NAMES[p[1]]+'</span></div><em>'+money(cur(p))+'</em>'+(x||'')+'</div>';
+function hello(){document.getElementById('hi').textContent=name?'Hi, '+name+'.':'Hi, gorgeous.'}
+function count(){document.getElementById('fc').textContent=favs.size}
+function renderRes(){
+  const res=document.getElementById('res');
+  if(skin&&mood){
+    const items=[SKIN[skin]].concat(MOOD[mood]).map(byName);
+    const tot=items.reduce((a,p)=>a+cur(p),0);
+    res.innerHTML='<h3>'+(name?esc(name)+', here is':'Here is')+' your routine</h3>'+items.map((p,i)=>row(p,i)).join('')+'<div class="tot"><span>Total</span><b>'+money(tot)+'</b></div><button type="button" class="hb2" id="saveall">♥ Save all to favourites</button>';
+  }else res.innerHTML='<p class="hint">Pick your skin type and mood to see your routine.</p>';
+}
+function renderFavs(){
+  const fl=[...favs].map(byName).filter(Boolean);
+  document.getElementById('favs').innerHTML=fl.length?'<h3>Your favourites</h3>'+fl.map((p,i)=>row(p,i,'<button type="button" class="x" data-r="'+p[0]+'" aria-label="Remove '+p[0]+'">✕</button>')).join(''):'';
+}
+function renderYou(){hello();count();renderRes();renderFavs();watch()}
+function syncHearts(){document.querySelectorAll('.fav').forEach(f=>{const on=favs.has(f.dataset.n);f.setAttribute('aria-pressed',on);f.textContent=on?'♥':'♡'})}
+const nm=document.getElementById('nm');nm.value=name;
+nm.addEventListener('input',e=>{name=e.target.value.trim().slice(0,20);save('name',name);hello()});
+nm.addEventListener('change',renderRes);
+document.querySelectorAll('[data-skin],[data-mood]').forEach(b=>b.addEventListener('click',()=>{
+  const k=b.dataset.skin?'skin':'mood';
+  if(k==='skin')skin=b.dataset.skin;else mood=b.dataset.mood;
+  document.querySelectorAll('[data-'+k+']').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  renderRes();watch();
+}));
+document.addEventListener('click',e=>{
+  const f=e.target.closest('.fav');
+  if(f){
+    const n=f.dataset.n;if(favs.has(n))favs.delete(n);else favs.add(n);
+    save('favs',[...favs]);syncHearts();
+    f.classList.remove('pop');void f.offsetWidth;f.classList.add('pop');
+    count();renderFavs();watch();return;
+  }
+  const r=e.target.closest('.x');
+  if(r){favs.delete(r.dataset.r);save('favs',[...favs]);syncHearts();count();renderFavs();watch();return}
+  if(e.target.id==='saveall'){
+    [SKIN[skin]].concat(MOOD[mood]).forEach(n=>favs.add(n));
+    save('favs',[...favs]);syncHearts();count();renderFavs();watch();
+  }
+});
+document.querySelectorAll('.half').forEach((h,k)=>{[[18,22],[70,16],[40,72],[86,58],[12,76]].forEach((p,i)=>{const e=document.createElement('i');e.className='spark';e.style.cssText='left:'+p[0]+'%;top:'+p[1]+'%;animation-delay:'+(i*.7+k*.35)+'s';h.appendChild(e)})});
+
+const TINT='Porcelain:#f6e0d0|Ivory:#f1d3bd|Sand:#ecc7a9|Beige:#e3b894|Honey:#d9a97f|Almond:#cf996b|Caramel:#c08a5d|Toffee:#b07a4f|Chestnut:#9a6841|Mocha:#85563a|Cocoa:#6f452f|Espresso:#5a3626';
+/* Placeholder details (ingredients, shades, ratings, reviews): replace with real product data before launch.
+   Row: name, key ingredients, shades or sizes, rating, review count, two sample reviews */
+const DET={};
+[
+['Cloud Cleanse Gel','Glycerin, Panthenol, Aloe Vera, Green Tea Extract','100 ml|200 ml',4.7,212,'A. from Surat|5|Removes everything without that tight feeling.','M. from Pune|4|Lovely texture, a little goes a long way.'],
+['Milky Toner','Rice Water, Niacinamide, Oat Extract, Hyaluronic Acid','100 ml|200 ml',4.6,148,'R. from Mumbai|5|My skin feels calm and soft right away.','S. from Delhi|4|Gentle and not sticky at all.'],
+['Dew Drop Mist','Rose Water, Glycerin, Cucumber Extract, Hyaluronic Acid','50 ml|100 ml',4.5,175,'K. from Jaipur|5|Instant glow, and it sets my makeup well.','N. from Surat|4|Fine mist with a light rose scent.'],
+['Barrier Cream','Ceramides, Squalane, Shea Butter, Panthenol','50 ml',4.8,96,'P. from Vadodara|5|Fixed my dry patches in a week.','T. from Pune|5|Rich but sinks in quickly.'],
+['Dewy Hydrating Moisturiser','Hyaluronic Acid, Glycerin, Aloe Vera, Vitamin E','50 ml|100 ml',4.7,131,'D. from Ahmedabad|5|Plump, bouncy skin all day.','L. from Mumbai|4|Light enough for humid weather.'],
+['Glow SPF 50 Primer','Zinc Oxide, Vitamin E, Niacinamide, Squalane','30 ml',4.6,203,'J. from Surat|5|No white cast, and foundation glides on.','V. from Delhi|4|Great under makeup with a dewy finish.'],
+['Overnight Lip Mask','Shea Butter, Candelilla Wax, Vitamin E, Berry Extract','Berry:#c44a7a|Vanilla:#e8c98a|Original:#f2c9d1',4.8,260,'H. from Pune|5|Woke up to soft lips every time.','C. from Jaipur|4|The berry scent is so good.'],
+['Skin Veil Tint','Hyaluronic Acid, Niacinamide, Squalane, Vitamin E',TINT,4.6,310,'A. from Ahmedabad|5|Looks like skin, only smoother.','F. from Mumbai|4|Easy to blend, wide shade range.'],
+['Soft Focus Concealer','Vitamin C, Caffeine, Hyaluronic Acid, Vitamin E',TINT,4.5,189,'B. from Surat|5|Hides dark circles without creasing.','G. from Delhi|4|Natural finish and very blendable.'],
+['Peach Kiss Blush Stick','Jojoba Oil, Shea Butter, Vitamin E, Mineral Pigments','Peach Kiss:#f59a7f|Rose Petal:#e98aa0|Soft Coral:#f27d6b|Warm Apricot:#f3a86c',4.8,342,'I. from Pune|5|The prettiest healthy flush.','E. from Vadodara|5|Works on cheeks and lips.'],
+['Brow Fluff Gel','Panthenol, Castor Oil, Flexible Film Former','Clear:#e9e2d8|Blonde:#b8946a|Taupe:#8e7461|Brown:#6b4a36|Dark Brown:#3f2b22',4.4,120,'Y. from Mumbai|4|Brows stay fluffy all day.','Z. from Surat|5|No flakes and no stiffness.'],
+['Clear Sip Lip Oil','Squalane, Jojoba Oil, Vitamin E, Cherry Seed Oil','Clear Sip:#f6d7da|Rosé:#f0a3b4|Cherry:#d9456a|Honey:#e5a95c',4.7,228,'O. from Jaipur|5|Glassy shine and not sticky.','U. from Delhi|4|Love the soft cherry tint.'],
+['Lash Lift Mascara','Panthenol, Candelilla Wax, Carnauba Wax, Vitamin B5','Black:#111111|Brown Black:#3b2a24',4.5,167,'Q. from Ahmedabad|4|Natural lift and zero clumps.','W. from Pune|5|Holds the curl all day.'],
+['Glow Stick Highlighter','Mica, Squalane, Vitamin E, Jojoba Oil','Champagne:#f5d3a8|Pearl:#f4ece6|Rose Gold:#e9b4a2|Bronze Glow:#c99163',4.7,154,'N. from Mumbai|5|A lit-from-within glow.','S. from Surat|4|Melts into skin beautifully.'],
+['Nude Eyeshadow Palette','Mica, Jojoba Esters, Silica, Vitamin E','Cream:#f1e2d0|Champagne:#e2c3a0|Taupe:#b79a85|Rose:#cf9f94|Mocha:#8b6652|Espresso:#4f3a31',4.8,276,'R. from Delhi|5|Every shade blends like a dream.','M. from Jaipur|5|Perfect for everyday looks.'],
+['Cherry Noir Lipstick','Candelilla Wax, Vitamin E, Jojoba Oil, Pigments','Cherry Noir:#b5122e|Brick Red:#9e3a2c|Wine:#6a1b2f|Fuchsia:#d1317c|Nude Mauve:#b47c78',4.7,298,'K. from Pune|5|Bold, velvety and lasts for hours.','A. from Mumbai|4|The red I have been searching for.'],
+['Berry Rush Liquid Lip','Squalane, Vitamin E, Hyaluronic Acid, Pigments','Berry Rush:#6e1a45|Plum:#5a2a58|Mulberry:#8a2b53|Dark Cherry:#7a1127',4.5,184,'D. from Surat|5|One swipe and the colour is full.','P. from Delhi|4|A comfortable matte that is not drying.'],
+['Razor Wing Liner','Water-based Pigment, Panthenol, Film Former','Black:#111111|Brown:#4a2f22|Navy:#1d2a55|Emerald:#0c5c47',4.6,221,'T. from Ahmedabad|5|The tip makes wings so easy.','L. from Pune|5|Waterproof and super black.'],
+['Midnight Shadow Palette','Mica, Silica, Jojoba Esters, Vitamin E','Smoke:#4a4a55|Plum:#5b3a63|Navy:#26315c|Gold:#d2a64c|Bronze:#9b6a3e|Black Pearl:#17161c',4.8,190,'J. from Mumbai|5|The shimmers are stunning and pigmented.','H. from Surat|4|Great range for night looks.'],
+['Hot Pink Pop Blush','Mica, Silica, Squalane, Vitamin E','Hot Pink:#e63e8c|Fuchsia:#c2288f|Tangerine:#ef7a3a|Berry:#a8285a',4.5,112,'G. from Jaipur|5|So vivid, and a little goes a long way.','B. from Delhi|4|Blends out beautifully.'],
+['Gilded Pigment Pot','Mica, Silica, Skin-safe Binder, Vitamin E','Gilded Gold:#d9a441|Rose Gold:#e0a28f|Silver:#c2c6cc|Bronze:#a8743f|Copper:#b4623a',4.6,98,'C. from Pune|5|A metallic finish that really pops.','F. from Mumbai|4|Press on with a damp brush.'],
+['Volume Bomb Mascara','Carbon Black, Candelilla Wax, Panthenol, Vitamin B5','Jet Black:#0d0d0d',4.6,205,'V. from Surat|5|Huge volume and no smudging.','I. from Ahmedabad|4|Dramatic and easy to wear.']
+].forEach(r=>{DET[r[0]]=r});
+const dlg=document.getElementById('dlg');let cd=null;
+const stars=n=>'★'.repeat(Math.round(n))+'☆'.repeat(5-Math.round(n));
+function variants(n){const d=DET[n];return d?d[2].split('|').map(x=>x.includes(':#')?x.split(':'):[x,null]):[]}
+function openD(n){
+  const p=byName(n);if(!p)return;
+  const kit=p[1]==='kits',d=DET[n];
+  const list=kit?[]:variants(n);
+  const hex=!kit&&list[0][1]!==null,on=live||preview;
+  cd={p,hex,list,sel:0,kit};
+  const c0=hex?list[0][1]:p[4];
+  const opts=list.map((x,i)=>hex?'<button class="sh" type="button" data-i="'+i+'" data-h="'+x[1]+'" style="--s:'+x[1]+'" aria-pressed="'+(i===0)+'" aria-label="'+x[0]+'"></button>':'<button class="chip" type="button" data-i="'+i+'" aria-pressed="'+(i===0)+'" aria-label="'+x[0]+'">'+x[0]+'</button>').join('');
+  const revs=d?d.slice(5).map(r=>{const a=r.split('|');return '<div class="rvw"><span class="stars" aria-label="'+a[1]+' out of 5">'+stars(+a[1])+'</span> '+a[2]+'<small>'+a[0]+'</small></div>'}).join(''):'';
+  const how=(HOW[n]||'').split('|').map(x=>'<li>'+x+'</li>').join('');
+  const ing=(kit?p[6]:d[1].split(', ')).map(x=>'<span>'+x+'</span>').join('');
+  dlg.innerHTML='<button class="xc" type="button" id="xc" aria-label="Close">✕</button><div class="dg"><div class="big" id="big" style="--c:'+c0+'"><svg viewBox="0 0 80 100" id="bsv" aria-hidden="true">'+icon(p[5],c0)+'</svg></div><div><p class="kind">'+NAMES[p[1]]+'</p><h2>'+p[0]+'</h2><div class="pr'+(on?' deal':'')+'"><b>'+money(cur(p))+'</b>'+(on?'<s>'+money(p[2])+'</s>':'')+'</div><div class="bd"><span>🐰 Cruelty-free</span><span>🌱 Vegan</span>'+(kit?'<span>🎁 Gift-boxed</span>':'')+'</div>'+(d?'<p><span class="stars" role="img" aria-label="'+d[3]+' out of 5">'+stars(d[3])+'</span> '+d[3]+' ('+d[4]+' reviews)</p>':'')+'<p>'+p[3]+'</p><h3>'+(kit?'What’s inside':'Key ingredients')+'</h3><div class="ing">'+ing+'</div>'+(kit?'':'<h3>'+(hex?'Shades':'Sizes')+': <span id="sn">'+list[0][0]+'</span></h3><div class="shades">'+opts+'</div>')+'<h3>How to use</h3><ol class="how">'+how+'</ol><p class="note">Patch test first. Stop using and rinse well if irritation occurs.</p>'+(d?'<h3>Reviews</h3>'+revs+'<p class="note">Preview reviews, to be replaced with real customer reviews.</p>':'')+'<div class="btnrow"><button class="hb2" type="button" id="dadd">Add to cart</button><button class="hb2 alt" type="button" id="dfav">'+(favs.has(n)?'♥ Saved':'♡ Save')+'</button></div></div></div>';
+  if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','');
+}
+dlg.addEventListener('click',e=>{
+  if(e.target===dlg||e.target.closest('#xc')){dlg.close();return}
+  const b=e.target.closest('[data-i]');
+  if(b){
+    cd.sel=+b.dataset.i;
+    dlg.querySelectorAll('[data-i]').forEach(x=>x.setAttribute('aria-pressed',x===b));
+    document.getElementById('sn').textContent=b.getAttribute('aria-label');
+    if(cd.hex){document.getElementById('bsv').innerHTML=icon(cd.p[5],b.dataset.h);document.getElementById('big').style.setProperty('--c',b.dataset.h)}
+    return;
+  }
+  const add=e.target.closest('#dadd');
+  if(add){addCart(cd.p[0],cd.kit?'':cd.list[cd.sel][0],true);add.textContent='Added ✓';return}
+  if(e.target.closest('#dfav')){
+    const n=cd.p[0];if(favs.has(n))favs.delete(n);else favs.add(n);
+    save('favs',[...favs]);syncHearts();count();renderFavs();watch();
+    e.target.closest('#dfav').textContent=favs.has(n)?'♥ Saved':'♡ Save';
+  }
+});
+document.addEventListener('click',e=>{
+  if(e.target.closest('.fav,.add'))return;
+  const c=e.target.closest('.card');
+  if(c){const m=c.querySelector('.more');if(m)openD(m.dataset.d)}
+});
+
+const HOW={
+'Cloud Cleanse Gel':'Wet your face and massage 1 pump over skin for 60 seconds|Rinse with lukewarm water|Use morning and night',
+'Milky Toner':'After cleansing, pour onto a cotton pad or your palms|Sweep or press gently over face and neck|Follow with moisturiser',
+'Dew Drop Mist':'Close your eyes and hold the bottle 20 cm from your face|Spray 2 to 3 times|Use before makeup to prep or over makeup to refresh',
+'Barrier Cream':'Take a pea-sized amount|Warm between fingers and press into face|Use twice a day, after toner',
+'Dewy Hydrating Moisturiser':'Apply on slightly damp skin|Smooth a coin-sized amount over face and neck|Use morning and night',
+'Glow SPF 50 Primer':'Apply about two finger lengths as the last skincare step|Wait 2 minutes before makeup|Reapply every 2 to 3 hours in the sun',
+'Overnight Lip Mask':'Apply a thick layer on clean lips before bed|Leave on overnight|Wipe off gently in the morning',
+'Skin Veil Tint':'Dot on cheeks, forehead and chin|Blend with fingers, a sponge or a brush|Layer for more coverage',
+'Soft Focus Concealer':'Dot under the eyes and over blemishes|Tap in with a fingertip or sponge|Set lightly if you need to',
+'Peach Kiss Blush Stick':'Swipe on the apples of your cheeks|Blend with fingers or a sponge|Dab on lips for a matching look',
+'Brow Fluff Gel':'Brush hairs upward|Brush through in the direction of growth|Let it dry for a soft hold',
+'Clear Sip Lip Oil':'Apply to bare lips or over lipstick|Reapply whenever you like',
+'Lash Lift Mascara':'Curl your lashes first|Wiggle the wand from root to tip|Add a second coat for more length',
+'Glow Stick Highlighter':'Glide on cheekbones, brow bone and nose bridge|Tap in with your fingers|Apply before powder for a dewy look',
+'Nude Eyeshadow Palette':'Sweep the lightest shade across the lid|Blend a mid shade into the crease|Add the darkest shade to the outer corner',
+'Cherry Noir Lipstick':'Line your lips if you like|Apply from the centre outwards|Blot and reapply for longer wear',
+'Berry Rush Liquid Lip':'Apply at the centre of the lips|Spread outwards to the corners|Let it dry for 30 seconds',
+'Razor Wing Liner':'Draw a thin line along the upper lashes|Flick up towards the end of the brow|Fill any gaps and let it dry',
+'Midnight Shadow Palette':'Prime your lids first|Pat shimmers on with a finger and blend mattes with a brush|Build the intensity gradually',
+'Hot Pink Pop Blush':'Tap a fluffy brush into the pan and shake off the extra|Smile and sweep onto cheeks|Blend upward and build slowly',
+'Gilded Pigment Pot':'Dampen a flat brush or fingertip|Press the pigment onto lids or cheekbones|Blend the edges with a clean brush',
+'Volume Bomb Mascara':'Curl your lashes|Wiggle the wand from root to tip|Apply two coats, combing through in between',
+'Clean Girl Kit':'Cleanse, then moisturise|Blend Skin Veil Tint over the face|Add the blush stick to cheeks and finish with lip oil',
+'Night Out Kit':'Build the eyes with the palette first|Line the upper lashes with Razor Wing Liner and add mascara|Finish with Cherry Noir Lipstick',
+'Skin Prep Set':'Cleanse, then tone|Mist, then moisturise|Finish with SPF in the morning'
+};
+const KITS=[
+['Clean Girl Kit',['Cloud Cleanse Gel','Dewy Hydrating Moisturiser','Skin Veil Tint','Peach Kiss Blush Stick','Clear Sip Lip Oil'],'#f1b9b0','A gift-boxed set for a soft, dewy everyday look.'],
+['Night Out Kit',['Cherry Noir Lipstick','Razor Wing Liner','Volume Bomb Mascara','Midnight Shadow Palette'],'#4a2a63','A gift-boxed set for bold eyes and a red lip.'],
+['Skin Prep Set',['Cloud Cleanse Gel','Milky Toner','Dew Drop Mist','Dewy Hydrating Moisturiser','Glow SPF 50 Primer'],'#9fd3e0','A gift-boxed set for a full skin prep routine.']
+];
+KITS.forEach(k=>{const sum=k[1].reduce((a,n)=>a+byName(n)[2],0);P.push([k[0],'kits',Math.round(sum*1.15/10)*10,k[3],k[2],'kit',k[1]])});
+
+const cdlg=document.getElementById('cart');
+let cart=load('cart',[]),ph=load('ph',''),ad=load('ad','');
+const rp=p=>live?deal(p[2]):p[2];
+let tt;
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),2200)}
+function cartCount(bump){
+  const el=document.getElementById('cc');el.textContent=cart.reduce((a,x)=>a+x.q,0);
+  if(bump){const b=el.parentElement;b.classList.remove('bump');void b.offsetWidth;b.classList.add('bump')}
+}
+function addCart(n,v,quiet){
+  const it=cart.find(x=>x.n===n&&x.v===v);
+  if(it)it.q++;else cart.push({n,v,q:1});
+  save('cart',cart);cartCount(true);
+  if(!quiet)toast(n+(v?' ('+v+')':'')+' added to cart');
+}
+const lineIcon=(n,v)=>{const p=byName(n);const h=(variants(n).find(x=>x[0]===v)||[])[1];return '<svg viewBox="0 0 80 100" aria-hidden="true">'+icon(p[5],h||p[4])+'</svg>'};
+function orderText(){
+  const lines=cart.map((x,i)=>(i+1)+'. '+x.n+(x.v?' ('+x.v+')':'')+' x'+x.q+' = '+money(rp(byName(x.n))*x.q));
+  const total=cart.reduce((a,x)=>a+rp(byName(x.n))*x.q,0);
+  const when=new Date().toLocaleString('en-IN',{timeZone:'Asia/Kolkata',dateStyle:'medium',timeStyle:'short'});
+  return 'New order, Dew & Velvet\nPlaced: '+when+' IST\nMidnight Hour price applied: '+(live?'Yes':'No')+'\n\nName: '+name+'\nPhone: '+ph+'\nAddress: '+ad+'\n\nItems:\n'+lines.join('\n')+'\n\nTotal: '+money(total);
+}
+function renderCart(){
+  cart=cart.filter(x=>byName(x.n));
+  const total=cart.reduce((a,x)=>a+rp(byName(x.n))*x.q,0);
+  const rows=cart.map((x,i)=>'<div class="ri">'+lineIcon(x.n,x.v)+'<div><b>'+x.n+'</b><span>'+(x.v||'Gift-boxed kit')+'</span></div><div class="qty"><button type="button" data-q="-1" data-k="'+i+'" aria-label="Fewer">−</button><span>'+x.q+'</span><button type="button" data-q="1" data-k="'+i+'" aria-label="More">+</button></div><em>'+money(rp(byName(x.n))*x.q)+'</em><button class="rm" type="button" data-rm="'+i+'" aria-label="Remove '+x.n+'">✕</button></div>').join('');
+  cdlg.innerHTML='<button class="xc" type="button" id="cx" aria-label="Close">✕</button><div class="cp"><h2>Your cart</h2>'+(cart.length?rows+'<div class="tot"><span>Total</span><b>'+money(total)+'</b></div><p class="note">'+(live?'Midnight Hour prices applied: 25% off.':'Orders sent from 12:00 to 12:30 am India time get 25% off. Prices update automatically.')+'</p><div class="cf"><input id="cn" placeholder="Your name" autocomplete="name" value="'+esc(name)+'"><input id="cph" placeholder="Phone number" inputmode="tel" autocomplete="tel" value="'+esc(ph)+'"><textarea id="cad" rows="3" placeholder="Delivery address" autocomplete="street-address">'+esc(ad)+'</textarea></div><p class="cerr" id="cerr" role="alert"></p><div class="btnrow"><button class="hb2" type="button" id="csend">Send order by email</button><button class="hb2 alt" type="button" id="ccopy">Copy order</button></div><p class="note">No payment is taken on this page. We confirm your order, delivery and payment details by reply.</p>':'<p class="hint">Your cart is empty. Add something lovely from the collection.</p>')+'</div>';
+}
+function openCart(){renderCart();if(cdlg.showModal)cdlg.showModal();else cdlg.setAttribute('open','')}
+document.getElementById('cartbtn').addEventListener('click',openCart);
+cdlg.addEventListener('input',e=>{
+  if(e.target.id==='cn'){name=e.target.value.trim().slice(0,40);save('name',name);hello();document.getElementById('nm').value=name}
+  if(e.target.id==='cph'){ph=e.target.value.trim();save('ph',ph)}
+  if(e.target.id==='cad'){ad=e.target.value.trim();save('ad',ad)}
+});
+cdlg.addEventListener('click',e=>{
+  if(e.target===cdlg||e.target.closest('#cx')){cdlg.close();return}
+  const q=e.target.closest('[data-q]');
+  if(q){const it=cart[+q.dataset.k];it.q+=+q.dataset.q;if(it.q<1)cart.splice(+q.dataset.k,1);save('cart',cart);cartCount();renderCart();return}
+  const rm=e.target.closest('[data-rm]');
+  if(rm){cart.splice(+rm.dataset.rm,1);save('cart',cart);cartCount();renderCart();return}
+  if(e.target.closest('#csend')||e.target.closest('#ccopy')){
+    const miss=[['cn',name],['cph',ph],['cad',ad]].find(x=>!x[1]);
+    if(miss){document.getElementById('cerr').textContent='Please fill in your name, phone number and address.';document.getElementById(miss[0]).focus();return}
+    document.getElementById('cerr').textContent='';
+    const t=orderText();
+    if(e.target.closest('#csend')){location.href='mailto:sushrutpatch@gmail.com?subject='+encodeURIComponent('New order from '+name)+'&body='+encodeURIComponent(t)}
+    else{try{navigator.clipboard.writeText(t).then(()=>{e.target.textContent='Copied ✓'},()=>{e.target.textContent='Copy not available'})}catch(err){e.target.textContent='Copy not available'}}
+  }
+});
+document.addEventListener('click',e=>{
+  const a=e.target.closest('.add');
+  if(a){const n=a.dataset.a;const v=variants(n)[0];addCart(n,v?v[0]:'')}
+});
+cartCount();
+
+const TL=TINT.split('|').map(x=>x.split(':'));
+document.getElementById('sw').innerHTML=TL.map((x,i)=>'<button class="sh" type="button" data-m="'+i+'" style="--s:'+x[1]+'" aria-pressed="false" aria-label="'+x[0]+'"></button>').join('');
+const UT={cool:['Cool',['Peach Kiss Blush Stick','Rose Petal'],['Clear Sip Lip Oil','Rosé'],['Cherry Noir Lipstick','Wine']],neutral:['Neutral',['Peach Kiss Blush Stick','Soft Coral'],['Clear Sip Lip Oil','Cherry'],['Cherry Noir Lipstick','Nude Mauve']],warm:['Warm',['Peach Kiss Blush Stick','Warm Apricot'],['Clear Sip Lip Oil','Honey'],['Cherry Noir Lipstick','Brick Red']]};
+let md=null,mu=null,mpicks=[];
+function renderMatch(){
+  const out=document.getElementById('mres');
+  if(md===null||!mu){out.innerHTML='<p class="hint">Pick a swatch and an undertone to see your match.</p>';return}
+  const sh=TL[md][0],u=UT[mu];
+  mpicks=[['Skin Veil Tint',sh],['Soft Focus Concealer',sh],u[1],u[2],u[3]];
+  out.innerHTML='<h3 class="serif" style="font-size:1.7rem;margin:10px 0 6px">Your match: '+sh+', '+u[0].toLowerCase()+' undertone</h3>'+mpicks.map((x,i)=>'<div class="ri rv" style="--d:'+i*80+'ms">'+lineIcon(x[0],x[1])+'<div><b>'+x[0]+'</b><span>'+x[1]+'</span></div><em>'+money(rp(byName(x[0])))+'</em></div>').join('')+'<p class="note">Base shades in your depth, plus colours that flatter your undertone.</p><button class="hb2" type="button" id="madd">Add all 5 to cart</button>';
+  watch();
+}
+document.getElementById('match').addEventListener('click',e=>{
+  const m=e.target.closest('[data-m]');
+  if(m){md=+m.dataset.m;document.querySelectorAll('[data-m]').forEach(x=>x.setAttribute('aria-pressed',x===m));renderMatch();return}
+  const u=e.target.closest('[data-u]');
+  if(u){mu=u.dataset.u;document.querySelectorAll('[data-u]').forEach(x=>x.setAttribute('aria-pressed',x===u));renderMatch();return}
+  if(e.target.id==='madd'){mpicks.forEach(x=>addCart(x[0],x[1],true));toast('5 items added to cart')}
+});
+renderMatch();
+
+function flat(){
+  const box=document.getElementById('flat'),items=document.getElementById('items'),mt=document.getElementById('mtxt'),mi=document.getElementById('mtin');
+  if(!box)return;
+  const W=+box.clientWidth||window.innerWidth-40,small=W<600;
+  const cols=small?5:9,cw=W/(cols+.5),rh=small?72:108,n=P.length;
+  const Tw=+mi.offsetWidth||Math.min(560,W-24),Ht=+mi.offsetHeight||320;
+  const tr=Math.ceil(Ht/rh);
+  const cellsFor=b=>{
+    const x0=(W-Tw)/2-cw*.4,x1=(W+Tw)/2+cw*.4,y0=b*rh-rh*.15,y1=(b+tr)*rh+rh*.15,out=[];
+    for(let r=0;r<2*b+tr;r++)for(let c=0;c<cols;c++){
+      const x=(c+.5+(r%2?.5:0))*cw,y=(r+.5)*rh;
+      if(x>x0&&x<x1&&y>y0&&y<y1)continue;
+      out.push([x,y]);
+    }
+    return out;
+  };
+  let b=1,free;
+  while((free=cellsFor(b)).length<n&&b<14)b++;
+  mt.style.padding=(b*rh+(tr*rh-Ht)/2)+'px 12px';
+  const order=P.map((p,i)=>i).sort((a,b)=>((a*13)%n)-((b*13)%n));
+  let h='';
+  order.forEach((idx,k)=>{
+    const cell=free[Math.floor(k*free.length/n)],p=P[idx];
+    const jx=(((k*37)%19-9)/9)*cw*.22,jy=(((k*53)%17-8)/8)*rh*.2;
+    const sc=p[1]==='kits'?1.4:(p[5]==='palette'||p[5]==='compact'?1.05:0.95+((k*29)%7)/20);
+    const rot=((k*41)%31)-15;
+    h+='<svg viewBox="0 0 80 100" style="left:'+(cell[0]+jx)+'px;top:'+(cell[1]+jy)+'px;height:'+(rh*1.08*sc)+'px;transform:translate(-50%,-50%) rotate('+rot+'deg);z-index:'+((k*17)%9)+'">'+icon(p[5],p[4])+'</svg>';
+  });
+  items.innerHTML=h;
+}
+let rz;window.addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(flat,150)});
+flat();
+
+const root=document.documentElement,tb=document.getElementById('theme');
+function setTheme(t,keep){
+  root.setAttribute('data-theme',t);
+  tb.textContent=t==='dark'?'☀️':'🌙';
+  tb.setAttribute('aria-label',t==='dark'?'Switch to light theme':'Switch to dark theme');
+  tb.title=tb.getAttribute('aria-label');
+  if(keep)save('theme',t);
+  flat();
+}
+setTheme(root.getAttribute('data-theme')||((typeof matchMedia==='function'&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'),false);
+tb.addEventListener('click',()=>setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark',true));
+(function(){
+  const h=document.querySelector('.half.clean');if(!h)return;
+  [[8,12,46],[78,8,30],[88,52,58],[14,62,34],[52,84,26],[66,34,22],[30,30,18]].forEach((b,i)=>{
+    const e=document.createElement('b');e.className='bub';
+    e.style.cssText='left:'+b[0]+'%;top:'+b[1]+'%;width:'+b[2]+'px;height:'+b[2]+'px;animation-delay:'+(i*.8)+'s';
+    h.appendChild(e);
+  });
+})();
+renderTabs();renderGrid();tick();setInterval(tick,1000);
+</script>
+</body>
+</html>
